@@ -1,4 +1,4 @@
-#include "HeatMethod.h"
+#include "GeodesicAlgorithms.h"
 
 void
 ReadOFFMesh(

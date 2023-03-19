@@ -3,8 +3,7 @@
 #include <vector>
 #include <fstream>
 
-#include "HeatMethod.h"
-#include "Marching.h"
+#include "GeodesicAlgorithms.h"
 
 int main()
 {

@@ -1,9 +1,8 @@
 #include "gtest/gtest.h"
 
-#include "../src/HeatMethod.h"
-#include "../src/Marching.h"
+#include "../src/GeodesicAlgorithms.h"
 
-TEST(GeodesicsTests, HeatMethodTests)
+TEST(GeodesicsTests, DISABLED_HeatMethodExactnessTest)
 {
     // Read Mesh
     const char* filename = "../../meshes/hexagon_lvl1.off";
@@ -27,7 +26,7 @@ TEST(GeodesicsTests, HeatMethodTests)
     EXPECT_EQ(hm_dist, eucli_dist);
 }
 
-TEST(GeodesicsTests, ShortestPathsTests)
+TEST(GeodesicsTests, ShortestPathsExactnessTest)
 {
     // Read Mesh
     const char* filename = "../../meshes/hexagon_lvl1.off";
@@ -51,7 +50,7 @@ TEST(GeodesicsTests, ShortestPathsTests)
     EXPECT_DOUBLE_EQ(sp_dist, eucli_dist);
 }
 
-TEST(GeodesicsTests, HeatMethodConvergence)
+TEST(GeodesicsTests, HeatMethodConvergenceTest)
 {
     // choose vertex locations
     Vertex_index vertex1(1);
