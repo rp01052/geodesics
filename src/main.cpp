@@ -32,7 +32,7 @@ int main()
 
     // investigate convergence on refined Hexagon meshes
     std::vector<double> distances = DistancesUnderRefinementOfHexagonMesh(vertex1, vertex2);
-    std::cout << "Heat method distance over refinement levels:" << std::endl;
+    std::cout << "Heat method distance over refinement levels (barycentric quadrisection):" << std::endl;
     for (double d : distances)
     {
         std::cout << d << std::endl;

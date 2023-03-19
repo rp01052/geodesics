@@ -11,3 +11,13 @@ cd built/
 cmake ..
 make
 '''
+The executable can be run using
+'''shell
+cd src/
+/.geodesics_run
+'''
+and
+'''shell
+cd test/
+/.geodesics_test
+'''

@@ -117,9 +117,9 @@ DistancesUnderRefinementOfHexagonMesh(
     int max_level = 6;
     std::vector<double> distances(max_level);//+1);
 
-    for (int l = 1; l <= max_level; ++l)
+    for (int l = 0; l < max_level; ++l)
     {
-        std::string filename = "../../meshes/hexagon_lvl" + std::to_string(l) + ".off";
+        std::string filename = "../../meshes/hexagon_lvl" + std::to_string(l+1) + ".off";
         Triangle_mesh mesh;
         ReadOFFMesh(mesh, filename.c_str());
         distances[l] = ComputeGeodesicDistance(mesh, vertex1, vertex2);

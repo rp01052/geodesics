@@ -71,17 +71,19 @@ TEST(GeodesicsTests, HeatMethodConvergenceTest)
     {
         for (int i = 1; i < distances.size(); ++i)
         {
-            EXPECT_TRUE(distances[i-1] <= distances[i] <= exact_distance);
+            EXPECT_TRUE(distances[i-1] <= distances[i]);
+            EXPECT_TRUE(distances[i] <= exact_distance);
         }
     }
     else
     {
         for (int i = 1; i < distances.size(); ++i)
         {
-            std::cout << distances[i-1] << " -> "
-                      << distances[i] << " -> "
-                      << exact_distance << std::endl;
-            EXPECT_TRUE(distances[i-1] > distances[i] > exact_distance);
+            //std::cout << distances[i-1] << " -> "
+            //          << distances[i] << " -> "
+            //          << exact_distance << std::endl;
+            EXPECT_TRUE(distances[i-1] > distances[i]);
+            EXPECT_TRUE(distances[i] > exact_distance);
         }
     }
 
